@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker NGINX - MySQL</title>
+</head>
+
+<body>
+    <h1>This container contains: </h1>
+    <pre>
+    <b>
+    myapp - htpp://localhost:8080</b><br>
+    ports: - 8080:80<br>
+    volumes: - ./html:/usr/share/nginx/html<br>
+    
+    <b>mysql</b><br>
+    ports: - 3307:3307<br>
+    volumes: - ./mysql:/var/lib/mysql<br>
+
+    <b>rabbitmq - http://localhost:15672/ (guest/guest)</b><br>
+    ports: - 5672:5672 - 15672:15672<br>
+    container_name: rabbitmq<br>
+    </pre>
+</body>
+
+</html>
